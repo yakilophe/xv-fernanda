@@ -60,7 +60,7 @@ window.INVITACION = {
   rsvp: {
     fechaLimite: "7 de noviembre de 2026",
     // Número de WhatsApp con lada de país, sin + ni espacios. Ej: 5215512345678
-    whatsapp: "",
+    whatsapp: "524495408650",
     mensaje: "¡Hola! Confirmo mi asistencia a los XV años de Fernanda 👑",
     // Si prefieres un Google Form u otro enlace, ponlo aquí (tiene prioridad)
     enlace: ""
