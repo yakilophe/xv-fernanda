@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tarjeta · XV Fernanda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  /* Tarjeta para compartir: 1080 x 1920 px */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    position: relative;
+    font-family: 'Cormorant Garamond', serif; color: #5a1d3b; text-align: center;
+    background:
+      radial-gradient(circle at 50% 22%, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0) 34%),
+      radial-gradient(ellipse at 8% 12%, rgba(247, 185, 215, .7), transparent 32%),
+      radial-gradient(ellipse at 92% 18%, rgba(248, 226, 166, .5), transparent 32%),
+      linear-gradient(180deg, #fff7fb 0%, #fde4f0 50%, #f9c3dd 100%);
+  }
+  .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .borde {
+    position: absolute; inset: 30px; z-index: 3; pointer-events: none;
+    border: 3px solid #d8a548; border-radius: 26px;
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, .35), inset 0 0 0 11px rgba(216, 165, 72, .55);
+  }
+  .escena { position: absolute; left: 0; bottom: 0; width: 1080px; height: 420px; z-index: 0; }
+  .contenido { position: relative; z-index: 1; padding-top: 54px; }
+  .estrellas span { position: absolute; color: #e9c870; font-size: 30px; text-shadow: 0 0 10px #f8e2a6; }
+
+  .corona { width: 150px; display: block; margin: 0 auto -14px; filter: drop-shadow(0 6px 8px rgba(143, 97, 27, .3)); }
+  .marco { height: 390px; display: block; margin: 0 auto; filter: drop-shadow(0 14px 22px rgba(143, 12, 79, .3)); }
+  .pre { font-family: 'Cinzel', serif; font-weight: 600; font-size: 40px; letter-spacing: .4em; color: #8f0c4f; margin-top: 12px; }
+  .cinta { position: relative; margin: 2px auto 0; width: 1000px; z-index: 0; }
+  .cinta::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 30%; bottom: 14%; z-index: -1;
+    background: linear-gradient(180deg, #f574b4, #e0218a 50%, #a3105e);
+    clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+  }
+  .nombre {
+    font-family: 'Pinyon Script', cursive; font-size: 160px; line-height: 1.12; padding: 0 30px;
+    background: linear-gradient(100deg, #9a6a1c 0%, #e9bd5d 20%, #fff3c9 38%, #e2b04f 55%, #a8731f 75%, #f2cf78 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 4px 2px rgba(74, 6, 41, .45));
+  }
+  .fecha { font-family: 'Cinzel', serif; font-weight: 700; font-size: 40px; letter-spacing: .12em; color: #8f0c4f; margin-top: 8px; }
+  .flori { width: 480px; height: 70px; display: block; margin: 4px auto 0; }
+
+  .eventos { display: flex; justify-content: center; gap: 40px; margin-top: 4px; }
+  .ev { width: 440px; }
+  .ev .ic { width: 84px; height: 84px; margin: 0 auto 6px; display: block; object-fit: contain; }
+  .ev .ico { fill: none; stroke: url(#gIcono); stroke-width: 2.6; stroke-linecap: square; stroke-linejoin: miter; }
+  .ev h3 { font-family: 'Cinzel', serif; font-size: 36px; letter-spacing: .14em; color: #8f0c4f; }
+  .ev .hora { font-family: 'Cinzel', serif; font-weight: 700; font-size: 34px; color: #8f611b; margin-top: 2px; }
+  .ev .lugar { font-size: 34px; font-weight: 700; line-height: 1.2; margin-top: 4px; }
+  .ev .dir { font-size: 30px; font-style: italic; }
+
+  .familia { margin-top: 22px; font-size: 30px; line-height: 1.5; }
+  .familia i { font-style: italic; }
+  .familia b { font-family: 'Cinzel', serif; font-weight: 600; font-size: 32px; color: #8f0c4f; letter-spacing: .04em; }
+
+  .qr-card {
+    position: relative; z-index: 2; margin: 22px auto 0; width: max-content;
+    display: flex; align-items: center; gap: 28px; text-align: left; white-space: nowrap;
+    background: rgba(255, 250, 252, .93); border: 2px solid #d8a548; border-radius: 26px;
+    padding: 22px 34px 22px 22px;
+    box-shadow: 0 12px 30px rgba(143, 12, 79, .25);
+  }
+  .qr-card img { width: 176px; height: 176px; border-radius: 10px; }
+  .qr-card .t1 { font-family: 'Pinyon Script', cursive; font-size: 64px; color: #c2166f; line-height: 1; }
+  .qr-card .t2 { font-family: 'Cinzel', serif; font-weight: 700; font-size: 26px; letter-spacing: .08em; color: #5a1d3b; margin-top: 10px; }
+  .qr-card .t3 { font-size: 27px; margin-top: 6px; color: #8f611b; font-weight: 600; }
+</style>
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true">
+    <defs>
+      <linearGradient id="gOro" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff1c1"/>
+        <stop offset=".25" stop-color="#e6b450"/>
+        <stop offset=".5" stop-color="#9a6a1c"/>
+        <stop offset=".72" stop-color="#f5d27a"/>
+        <stop offset="1" stop-color="#b07a26"/>
+      </linearGradient>
+      <linearGradient id="gOroV" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff3c9"/>
+        <stop offset=".45" stop-color="#e2b04f"/>
+        <stop offset=".6" stop-color="#a8731f"/>
+        <stop offset="1" stop-color="#f2cf78"/>
+      </linearGradient>
+      <radialGradient id="gPetalo" cx=".5" cy=".3" r=".8">
+        <stop offset="0" stop-color="#ff8cc6"/>
+        <stop offset=".55" stop-color="#e0218a"/>
+        <stop offset="1" stop-color="#8f0c4f"/>
+      </radialGradient>
+      <radialGradient id="gPetaloIn" cx=".5" cy=".4" r=".7">
+        <stop offset="0" stop-color="#ffb3d9"/>
+        <stop offset="1" stop-color="#d1187b"/>
+      </radialGradient>
+      <radialGradient id="gGema" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset=".35" stop-color="#ff7fbf"/>
+        <stop offset="1" stop-color="#9c0d52"/>
+      </radialGradient>
+      <radialGradient id="gPerla" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset=".6" stop-color="#f6e6ee"/>
+        <stop offset="1" stop-color="#c9a2b5"/>
+      </radialGradient>
+
+      <linearGradient id="gIcono" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#a8792a"/>
+        <stop offset=".55" stop-color="#f6c983"/>
+        <stop offset="1" stop-color="#c99a4a"/>
+      </linearGradient>
+      <linearGradient id="gMuro" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe3f0"/>
+        <stop offset="1" stop-color="#f490c2"/>
+      </linearGradient>
+      <linearGradient id="gTecho" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f35aa6"/>
+        <stop offset="1" stop-color="#a3105e"/>
+      </linearGradient>
+      <linearGradient id="gColina1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fbc6df"/>
+        <stop offset="1" stop-color="#f39ac6"/>
+      </linearGradient>
+      <linearGradient id="gColina2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ee6aac"/>
+        <stop offset="1" stop-color="#b5126a"/>
+      </linearGradient>
+      <filter id="fNube" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+      <filter id="fLuz" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="2.5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+
+      <!-- Castillo detallado -->
+      <symbol id="castilloHD" viewBox="60 -20 280 280">
+        <g fill="url(#gMuro)">
+          <rect x="72" y="165" width="26" height="95"/>
+          <rect x="302" y="165" width="26" height="95"/>
+          <rect x="98" y="190" width="204" height="70"/>
+          <path d="M100 182h10v8h-10zM118 182h10v8h-10zM136 182h10v8h-10zM254 182h10v8h-10zM272 182h10v8h-10zM290 182h10v8h-10z"/>
+          <rect x="118" y="128" width="34" height="132"/>
+          <rect x="248" y="128" width="34" height="132"/>
+          <rect x="170" y="95" width="60" height="165"/>
+        </g>
+        <g fill="url(#gTecho)">
+          <path d="M67 167 85 112 103 167Z"/><path d="M297 167 315 112 333 167Z"/>
+          <path d="M112 130 135 50 158 130Z"/><path d="M242 130 265 50 288 130Z"/>
+          <path d="M162 98 200 6 238 98Z"/>
+        </g>
+        <g stroke="#a3105e" stroke-width="1.5">
+          <path d="M200 6V-12M135 50V36M265 50V36M85 112v-10M315 112v-10"/>
+        </g>
+        <g fill="#e0218a">
+          <path d="M200-12l18 5-18 5z"/><path d="M135 36l12 4-12 4z"/><path d="M265 36l12 4-12 4z"/>
+        </g>
+        <g fill="#fff0c2" filter="url(#fLuz)">
+          <circle cx="200" cy="122" r="8"/>
+          <rect x="193" y="148" width="14" height="22" rx="7"/>
+          <rect x="130" y="150" width="10" height="16" rx="5"/><rect x="260" y="150" width="10" height="16" rx="5"/>
+          <rect x="80.5" y="186" width="9" height="13" rx="4.5"/><rect x="310.5" y="186" width="9" height="13" rx="4.5"/>
+          <rect x="130" y="200" width="10" height="14" rx="5"/><rect x="260" y="200" width="10" height="14" rx="5"/>
+        </g>
+        <path d="M184 260v-30a16 16 0 0 1 32 0v30Z" fill="#b5126a"/>
+        <path d="M200 214v46" stroke="#e2b04f" stroke-width="1.2"/>
+        <g fill="none" stroke="#e2b04f" stroke-width="1" opacity=".8">
+          <path d="M170 95h60M118 128h34M248 128h34M98 190h204"/>
+        </g>
+      </symbol>
+
+      <!-- Escena: cielo, nubes, colinas, castillo y rosas -->
+      <symbol id="escena" viewBox="0 0 400 240" preserveAspectRatio="xMidYMax slice">
+        <g filter="url(#fNube)" fill="#fff">
+          <ellipse cx="60" cy="105" rx="55" ry="13" opacity=".9"/>
+          <ellipse cx="95" cy="96" rx="30" ry="11" opacity=".8"/>
+          <ellipse cx="335" cy="88" rx="62" ry="14" opacity=".9"/>
+          <ellipse cx="300" cy="80" rx="28" ry="10" opacity=".8"/>
+          <ellipse cx="205" cy="55" rx="42" ry="9" opacity=".6"/>
+        </g>
+        <path d="M0 175Q50 140 110 160T230 150T330 156T400 150V240H0Z" fill="url(#gColina1)"/>
+        <use href="#castilloHD" x="158" y="108" width="84" height="84"/>
+        <path d="M0 200Q70 176 150 194T290 188T400 194V240H0Z" fill="url(#gColina2)"/>
+        <g>
+          <use href="#hoja" x="10" y="200" width="30" height="16" transform="rotate(-30 25 208)"/>
+          <use href="#hoja" x="44" y="208" width="26" height="14" transform="rotate(20 57 215)"/>
+          <use href="#rosa" x="-6" y="196" width="40" height="40"/>
+          <use href="#rosa" x="26" y="208" width="30" height="30"/>
+          <use href="#rosa" x="50" y="216" width="22" height="22"/>
+          <use href="#hoja" x="350" y="200" width="30" height="16" transform="rotate(-150 365 208)"/>
+          <use href="#rosa" x="364" y="194" width="42" height="42"/>
+          <use href="#rosa" x="340" y="210" width="28" height="28"/>
+          <use href="#rosa" x="322" y="218" width="20" height="20"/>
+        </g>
+      </symbol>
+
+      <!-- Rosa -->
+      <symbol id="rosa" viewBox="-50 -50 100 100">
+        <g fill="url(#gPetalo)" stroke="#7a0a43" stroke-width=".6" stroke-opacity=".5">
+          <ellipse rx="19" ry="27" transform="rotate(0) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(72) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(144) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(216) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(288) translate(0 -17)"/>
+        </g>
+        <g fill="url(#gPetaloIn)" stroke="#8f0c4f" stroke-width=".6" stroke-opacity=".5">
+          <ellipse rx="13" ry="18" transform="rotate(36) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(108) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(180) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(252) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(324) translate(0 -10)"/>
+        </g>
+        <circle r="11" fill="#e83d97"/>
+        <path d="M0 0m-2 0a2 2 0 1 1 4 0a5 5 0 1 1-9 1a8.5 8.5 0 1 1 15-4" fill="none" stroke="#8f0c4f" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Hoja dorada -->
+      <symbol id="hoja" viewBox="0 -12 44 24">
+        <path d="M0 0C10-12 30-12 44 0 30 12 10 12 0 0Z" fill="url(#gOro)"/>
+        <path d="M2 0H40" stroke="#8f611b" stroke-width=".8" opacity=".6"/>
+      </symbol>
+
+      <!-- Tiara -->
+      <symbol id="corona" viewBox="0 0 120 80">
+        <path d="M8 70 Q6 52 14 46 Q26 40 32 22 Q40 42 50 34 Q56 20 60 4 Q64 20 70 34 Q80 42 88 22 Q94 40 106 46 Q114 52 112 70 Q60 58 8 70Z" fill="url(#gOroV)" stroke="#8f611b" stroke-width="1.2"/>
+        <path d="M14 66 Q60 54 106 66" fill="none" stroke="#fff3c9" stroke-width="1.5" opacity=".8"/>
+        <path d="M50 34 Q60 44 70 34" fill="none" stroke="#8f611b" stroke-width="1"/>
+        <ellipse cx="60" cy="34" rx="5" ry="8" fill="url(#gGema)" stroke="#8f611b" stroke-width=".8"/>
+        <circle cx="32" cy="44" r="3.6" fill="url(#gGema)"/>
+        <circle cx="88" cy="44" r="3.6" fill="url(#gGema)"/>
+        <circle cx="60" cy="5" r="2.6" fill="#fff6dc"/>
+        <circle cx="32" cy="22" r="2.2" fill="#fff6dc"/>
+        <circle cx="88" cy="22" r="2.2" fill="#fff6dc"/>
+      </symbol>
+
+      <!-- Floritura -->
+      <symbol id="flori" viewBox="0 0 240 40">
+        <g fill="none" stroke="url(#gOro)" stroke-width="1.6" stroke-linecap="round">
+          <path d="M120 20C100 4 80 4 70 14S74 32 84 26 82 12 72 16"/>
+          <path d="M120 20C140 4 160 4 170 14S166 32 156 26 158 12 168 16"/>
+          <path d="M70 20H8M170 20H232"/>
+          <path d="M40 20c-6-8-14-8-16 0M200 20c6-8 14-8 16 0"/>
+        </g>
+        <circle cx="120" cy="20" r="4" fill="url(#gGema)"/>
+        <circle cx="6" cy="20" r="2" fill="#e2b04f"/><circle cx="234" cy="20" r="2" fill="#e2b04f"/>
+      </symbol>
+
+      <!-- Rueca -->
+      <symbol id="rueca" viewBox="0 0 120 120">
+        <g fill="none" stroke="url(#gOro)" stroke-width="3" stroke-linecap="round">
+          <circle cx="62" cy="48" r="34"/>
+          <circle cx="62" cy="48" r="28" stroke-width="1.2"/>
+          <g stroke-width="2">
+            <path d="M62 14V82M28 48H96M38 24l48 48M86 24 38 72"/>
+          </g>
+          <path d="M30 104 50 70M94 104 76 70M20 108H104M62 82v22"/>
+          <path d="M14 108 30 60"/>
+        </g>
+        <circle cx="62" cy="48" r="6" fill="url(#gGema)"/>
+        <path d="M30 60q-6-20 4-34" fill="none" stroke="#e0218a" stroke-width="2" stroke-dasharray="2 3"/>
+      </symbol>
+
+      <!-- Castillo -->
+      <symbol id="castillo" viewBox="0 0 400 220">
+        <path d="M0 220V170h30v-30l-6-4 18-46 18 46-6 4v30h40v-60l-8-6 26-68 26 68-8 6v18h20V70l-10-8 40-62 40 62-10 8v58h20v-18l-8-6 26-68 26 68-8 6v60h40v-30l-6-4 18-46 18 46-6 4v30h30v50Z"/>
+        <path d="M188 220v-40a12 12 0 0 1 24 0v40Z" fill="#fff" opacity=".25"/>
+      </symbol>
+
+      <!-- Mariposa -->
+      <symbol id="mariposa" viewBox="0 0 40 30">
+        <path d="M20 15C14 2 2 0 3 8s10 8 17 7C12 18 4 26 10 28s9-6 10-13ZM20 15C26 2 38 0 37 8s-10 8-17 7c8 3 16 11 10 13s-9-6-10-13Z" fill="url(#gOro)"/>
+        <path d="M20 8v16" stroke="#8f611b" stroke-width="1.4" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <svg class="escena" viewBox="0 0 400 240" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><use href="#escena"/></svg>
+  <div class="borde"></div>
+  <div class="estrellas">
+    <span style="left:90px;top:120px">✦</span><span style="right:110px;top:180px">✦</span>
+    <span style="left:140px;top:560px;font-size:22px">✦</span><span style="right:150px;top:470px;font-size:24px">✦</span>
+  </div>
+
+  <div class="contenido">
+    <img class="corona" src="../assets/img/corona.png" alt="">
+    <img class="marco" src="../assets/img/marco-aurora.png" alt="">
+    <p class="pre" id="titulo"></p>
+    <div class="cinta"><p class="nombre" id="nombre"></p></div>
+    <p class="fecha" id="fecha"></p>
+    <svg class="flori"><use href="#flori"/></svg>
+    <div class="eventos" id="eventos"></div>
+    <p class="familia" id="familia"></p>
+    <div class="qr-card">
+      <img src="qr.svg" alt="Código QR de la invitación">
+      <div>
+        <p class="t1">Abre tu invitación</p>
+        <p class="t2">ESCANEA O ABRE EL LINK</p>
+        <p class="t3">yakilophe.github.io/xv-fernanda</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../js/config.js"></script>
+  <script>
+    const C = window.INVITACION;
+    const f = new Date(C.fecha);
+    const larga = f.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    document.getElementById('titulo').textContent = C.titulo;
+    document.getElementById('nombre').textContent = C.nombre;
+    document.getElementById('fecha').textContent = larga.toUpperCase();
+    const icon = {
+      iglesia: '<img class="ic" src="../assets/img/icono-iglesia.png" alt="">',
+      recepcion: '<svg class="ic" viewBox="0 0 64 64"><g class="ico"><g transform="rotate(-14 22 56)"><path d="M15 12h14l-1.5 16a5.5 5.5 0 0 1-11 0Z"/><path d="M22 33.5V52M15 52h14"/><path d="M16 20h12"/></g><g transform="rotate(14 42 56)"><path d="M35 12h14l-1.5 16a5.5 5.5 0 0 1-11 0Z"/><path d="M42 33.5V52M35 52h14"/><path d="M36 20h12"/></g><path d="M32 3v5M26 5l2.5 4M38 5l-2.5 4"/></g></svg>'
+    };
+    document.getElementById('eventos').innerHTML = C.eventos.filter(e => e.lugar).map(e => `
+      <div class="ev">${icon[e.icono] || ''}
+        <h3>${e.titulo.toUpperCase()}</h3>
+        <p class="hora">${e.hora}</p>
+        <p class="lugar">${e.lugar}</p>
+        ${e.direccion ? `<p class="dir">${e.direccion}</p>` : ''}
+      </div>`).join('');
+    const pad = C.padrinos && C.padrinos[0];
+    document.getElementById('familia').innerHTML =
+      `<i>Mis padres</i> &nbsp;<b>${C.padres.papa} &amp; ${C.padres.mama}</b>` +
+      (pad ? `<br><i>Mis padrinos</i> &nbsp;<b>${pad.nombres}</b>` : '');
+  </script>
+</body>
+</html>

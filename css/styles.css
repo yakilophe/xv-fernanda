@@ -15,6 +15,7 @@
   --tinta: #5a1d3b;
   --oro-grad: linear-gradient(100deg, #9a6a1c 0%, #e9bd5d 20%, #fff3c9 38%, #e2b04f 55%, #a8731f 75%, #f2cf78 100%);
   --oro-grad-dark: linear-gradient(100deg, #6e4810 0%, #b9862a 20%, #e9c870 36%, #a87720 52%, #6e4810 72%, #c99a3a 100%);
+  --escena-h: clamp(170px, 42vw, 300px); /* alto del castillo de la portada */
   --script: 'Pinyon Script', cursive;
   --caps: 'Cinzel', serif;
   --serif: 'Cormorant Garamond', Georgia, serif;
@@ -345,7 +346,7 @@ a { color: inherit; }
   position: relative;
   min-height: 100vh; min-height: 100svh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 50px 16px 90px;
+  padding: 40px 16px calc(var(--escena-h) + 8px);
   text-align: center;
   overflow: hidden;
 }
@@ -359,7 +360,7 @@ a { color: inherit; }
 }
 .escena {
   position: absolute; left: 0; bottom: 0;
-  width: 100%; height: min(28%, 300px);
+  width: 100%; height: var(--escena-h);
   z-index: -1; pointer-events: none;
 }
 .frame-wrap {
