@@ -7,7 +7,7 @@ window.INVITACION = {
   titulo: "Mis XV Años",
 
   // Fecha y hora del evento (formato AAAA-MM-DDTHH:MM:SS)
-  fecha: "2026-11-21T17:00:00", // 21 de noviembre de 2026 (ajusta la hora)
+  fecha: "2026-11-21T16:00:00", // 21 de noviembre de 2026, misa a las 4:00 p.m.
 
   // Canción de fondo (pon tu archivo .mp3 en assets/music/)
   musica: "assets/music/cancion.mp3",
@@ -24,25 +24,25 @@ window.INVITACION = {
 
   padres: {
     texto: "Con todo mi amor y gratitud a mis padres",
-    papa: "Nombre del Papá",
-    mama: "Nombre de la Mamá",
+    papa: "Salvador Herrada",
+    mama: "Guadalupe Vega",
     dedicatoria: "por su amor incondicional, su guía y su apoyo en el camino que me ha traído hasta este día tan especial."
   },
 
   padrinos: [
-    { rol: "Mis padrinos", nombres: "Nombre del Padrino & Nombre de la Madrina" }
+    { rol: "Mis padrinos", nombres: "Enrique de la Cruz & Lucía Vega" }
   ],
 
   // Itinerario. Íconos disponibles:
   // iglesia, recepcion, cena, vals, baile, fin, pastel, foto
   // También puedes poner tu propia imagen en cada evento: imagen: "assets/img/plato.png"
   eventos: [
-    { icono: "iglesia",   titulo: "Misa",       hora: "17:00 hrs", lugar: "Nombre de la Iglesia", direccion: "Calle, número, colonia, ciudad", mapa: "https://maps.google.com" },
-    { icono: "recepcion", titulo: "Recepción",  hora: "19:00 hrs", lugar: "Nombre del Salón",     direccion: "Calle, número, colonia, ciudad", mapa: "https://maps.google.com" },
-    { icono: "cena",      titulo: "Cena",       hora: "20:00 hrs" },
-    { icono: "vals",      titulo: "Vals",       hora: "21:00 hrs" },
-    { icono: "baile",     titulo: "¡A bailar!", hora: "21:30 hrs" },
-    { icono: "fin",       titulo: "Fin del cuento", hora: "02:00 hrs" }
+    { icono: "iglesia",   titulo: "Misa",       hora: "4:00 p.m.", lugar: "Iglesia San Isidro Labrador", direccion: "La Guayana", mapa: "https://maps.app.goo.gl/8mze3hDCWHqXkWxs7" },
+    { icono: "recepcion", titulo: "Recepción",  hora: "6:00 p.m.", lugar: "Terraza & Jardín “Las Fuentes”", mapa: "https://maps.app.goo.gl/d2TaGsvHXnQBYfYK8" },
+    { icono: "cena",      titulo: "Cena",       hora: "6:30 p.m." },
+    { icono: "baile",     titulo: "¡A bailar!", hora: "8:00 p.m." },
+    { icono: "vals",      titulo: "Vals",       hora: "9:00 p.m." },
+    { icono: "fin",       titulo: "Fin del cuento", hora: "1:00 a.m." }
   ],
 
   vestimenta: {
