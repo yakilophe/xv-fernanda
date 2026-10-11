@@ -1,0 +1,2 @@
+Coloca aquí la foto de la quinceañera (ej. fernanda.jpg)
+y ponla en js/config.js -> foto: "assets/img/fernanda.jpg"

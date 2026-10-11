@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mis XV Años · Fernanda</title>
+  <meta name="description" content="Estás invitado a los XV años de Fernanda. Un cuento de hadas hecho realidad.">
+  <meta name="theme-color" content="#a3105e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%91%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Mis XV Años · Fernanda">
+  <meta property="og:description" content="Érase una vez... un cuento que quiero compartir contigo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+</head>
+<body class="locked">
+
+  <!-- ================= SÍMBOLOS SVG REUTILIZABLES ================= -->
+  <svg class="svg-defs" aria-hidden="true">
+    <defs>
+      <linearGradient id="gOro" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff1c1"/>
+        <stop offset=".25" stop-color="#e6b450"/>
+        <stop offset=".5" stop-color="#9a6a1c"/>
+        <stop offset=".72" stop-color="#f5d27a"/>
+        <stop offset="1" stop-color="#b07a26"/>
+      </linearGradient>
+      <linearGradient id="gOroV" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fff3c9"/>
+        <stop offset=".45" stop-color="#e2b04f"/>
+        <stop offset=".6" stop-color="#a8731f"/>
+        <stop offset="1" stop-color="#f2cf78"/>
+      </linearGradient>
+      <radialGradient id="gPetalo" cx=".5" cy=".3" r=".8">
+        <stop offset="0" stop-color="#ff8cc6"/>
+        <stop offset=".55" stop-color="#e0218a"/>
+        <stop offset="1" stop-color="#8f0c4f"/>
+      </radialGradient>
+      <radialGradient id="gPetaloIn" cx=".5" cy=".4" r=".7">
+        <stop offset="0" stop-color="#ffb3d9"/>
+        <stop offset="1" stop-color="#d1187b"/>
+      </radialGradient>
+      <radialGradient id="gGema" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset=".35" stop-color="#ff7fbf"/>
+        <stop offset="1" stop-color="#9c0d52"/>
+      </radialGradient>
+      <radialGradient id="gPerla" cx=".35" cy=".3" r=".8">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset=".6" stop-color="#f6e6ee"/>
+        <stop offset="1" stop-color="#c9a2b5"/>
+      </radialGradient>
+
+      <linearGradient id="gIcono" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#a8792a"/>
+        <stop offset=".55" stop-color="#f6c983"/>
+        <stop offset="1" stop-color="#c99a4a"/>
+      </linearGradient>
+      <linearGradient id="gMuro" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe3f0"/>
+        <stop offset="1" stop-color="#f490c2"/>
+      </linearGradient>
+      <linearGradient id="gTecho" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f35aa6"/>
+        <stop offset="1" stop-color="#a3105e"/>
+      </linearGradient>
+      <linearGradient id="gColina1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fbc6df"/>
+        <stop offset="1" stop-color="#f39ac6"/>
+      </linearGradient>
+      <linearGradient id="gColina2" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ee6aac"/>
+        <stop offset="1" stop-color="#b5126a"/>
+      </linearGradient>
+      <filter id="fNube" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="5"/></filter>
+      <filter id="fLuz" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="2.5" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+
+      <!-- Castillo detallado -->
+      <symbol id="castilloHD" viewBox="60 -20 280 280">
+        <g fill="url(#gMuro)">
+          <rect x="72" y="165" width="26" height="95"/>
+          <rect x="302" y="165" width="26" height="95"/>
+          <rect x="98" y="190" width="204" height="70"/>
+          <path d="M100 182h10v8h-10zM118 182h10v8h-10zM136 182h10v8h-10zM254 182h10v8h-10zM272 182h10v8h-10zM290 182h10v8h-10z"/>
+          <rect x="118" y="128" width="34" height="132"/>
+          <rect x="248" y="128" width="34" height="132"/>
+          <rect x="170" y="95" width="60" height="165"/>
+        </g>
+        <g fill="url(#gTecho)">
+          <path d="M67 167 85 112 103 167Z"/><path d="M297 167 315 112 333 167Z"/>
+          <path d="M112 130 135 50 158 130Z"/><path d="M242 130 265 50 288 130Z"/>
+          <path d="M162 98 200 6 238 98Z"/>
+        </g>
+        <g stroke="#a3105e" stroke-width="1.5">
+          <path d="M200 6V-12M135 50V36M265 50V36M85 112v-10M315 112v-10"/>
+        </g>
+        <g fill="#e0218a">
+          <path d="M200-12l18 5-18 5z"/><path d="M135 36l12 4-12 4z"/><path d="M265 36l12 4-12 4z"/>
+        </g>
+        <g fill="#fff0c2" filter="url(#fLuz)">
+          <circle cx="200" cy="122" r="8"/>
+          <rect x="193" y="148" width="14" height="22" rx="7"/>
+          <rect x="130" y="150" width="10" height="16" rx="5"/><rect x="260" y="150" width="10" height="16" rx="5"/>
+          <rect x="80.5" y="186" width="9" height="13" rx="4.5"/><rect x="310.5" y="186" width="9" height="13" rx="4.5"/>
+          <rect x="130" y="200" width="10" height="14" rx="5"/><rect x="260" y="200" width="10" height="14" rx="5"/>
+        </g>
+        <path d="M184 260v-30a16 16 0 0 1 32 0v30Z" fill="#b5126a"/>
+        <path d="M200 214v46" stroke="#e2b04f" stroke-width="1.2"/>
+        <g fill="none" stroke="#e2b04f" stroke-width="1" opacity=".8">
+          <path d="M170 95h60M118 128h34M248 128h34M98 190h204"/>
+        </g>
+      </symbol>
+
+      <!-- Escena: cielo, nubes, colinas, castillo y rosas -->
+      <symbol id="escena" viewBox="0 0 400 240" preserveAspectRatio="xMidYMax slice">
+        <g filter="url(#fNube)" fill="#fff">
+          <ellipse cx="60" cy="105" rx="55" ry="13" opacity=".9"/>
+          <ellipse cx="95" cy="96" rx="30" ry="11" opacity=".8"/>
+          <ellipse cx="335" cy="88" rx="62" ry="14" opacity=".9"/>
+          <ellipse cx="300" cy="80" rx="28" ry="10" opacity=".8"/>
+          <ellipse cx="205" cy="55" rx="42" ry="9" opacity=".6"/>
+        </g>
+        <path d="M0 175Q50 140 110 160T230 150T330 156T400 150V240H0Z" fill="url(#gColina1)"/>
+        <use href="#castilloHD" x="136" y="66" width="128" height="128"/>
+        <path d="M0 200Q70 176 150 194T290 188T400 194V240H0Z" fill="url(#gColina2)"/>
+        <g>
+          <use href="#hoja" x="10" y="200" width="30" height="16" transform="rotate(-30 25 208)"/>
+          <use href="#hoja" x="44" y="208" width="26" height="14" transform="rotate(20 57 215)"/>
+          <use href="#rosa" x="-6" y="196" width="40" height="40"/>
+          <use href="#rosa" x="26" y="208" width="30" height="30"/>
+          <use href="#rosa" x="50" y="216" width="22" height="22"/>
+          <use href="#hoja" x="350" y="200" width="30" height="16" transform="rotate(-150 365 208)"/>
+          <use href="#rosa" x="364" y="194" width="42" height="42"/>
+          <use href="#rosa" x="340" y="210" width="28" height="28"/>
+          <use href="#rosa" x="322" y="218" width="20" height="20"/>
+        </g>
+      </symbol>
+
+      <!-- Rosa -->
+      <symbol id="rosa" viewBox="-50 -50 100 100">
+        <g fill="url(#gPetalo)" stroke="#7a0a43" stroke-width=".6" stroke-opacity=".5">
+          <ellipse rx="19" ry="27" transform="rotate(0) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(72) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(144) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(216) translate(0 -17)"/>
+          <ellipse rx="19" ry="27" transform="rotate(288) translate(0 -17)"/>
+        </g>
+        <g fill="url(#gPetaloIn)" stroke="#8f0c4f" stroke-width=".6" stroke-opacity=".5">
+          <ellipse rx="13" ry="18" transform="rotate(36) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(108) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(180) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(252) translate(0 -10)"/>
+          <ellipse rx="13" ry="18" transform="rotate(324) translate(0 -10)"/>
+        </g>
+        <circle r="11" fill="#e83d97"/>
+        <path d="M0 0m-2 0a2 2 0 1 1 4 0a5 5 0 1 1-9 1a8.5 8.5 0 1 1 15-4" fill="none" stroke="#8f0c4f" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Hoja dorada -->
+      <symbol id="hoja" viewBox="0 -12 44 24">
+        <path d="M0 0C10-12 30-12 44 0 30 12 10 12 0 0Z" fill="url(#gOro)"/>
+        <path d="M2 0H40" stroke="#8f611b" stroke-width=".8" opacity=".6"/>
+      </symbol>
+
+      <!-- Tiara -->
+      <symbol id="corona" viewBox="0 0 120 80">
+        <path d="M8 70 Q6 52 14 46 Q26 40 32 22 Q40 42 50 34 Q56 20 60 4 Q64 20 70 34 Q80 42 88 22 Q94 40 106 46 Q114 52 112 70 Q60 58 8 70Z" fill="url(#gOroV)" stroke="#8f611b" stroke-width="1.2"/>
+        <path d="M14 66 Q60 54 106 66" fill="none" stroke="#fff3c9" stroke-width="1.5" opacity=".8"/>
+        <path d="M50 34 Q60 44 70 34" fill="none" stroke="#8f611b" stroke-width="1"/>
+        <ellipse cx="60" cy="34" rx="5" ry="8" fill="url(#gGema)" stroke="#8f611b" stroke-width=".8"/>
+        <circle cx="32" cy="44" r="3.6" fill="url(#gGema)"/>
+        <circle cx="88" cy="44" r="3.6" fill="url(#gGema)"/>
+        <circle cx="60" cy="5" r="2.6" fill="#fff6dc"/>
+        <circle cx="32" cy="22" r="2.2" fill="#fff6dc"/>
+        <circle cx="88" cy="22" r="2.2" fill="#fff6dc"/>
+      </symbol>
+
+      <!-- Floritura -->
+      <symbol id="flori" viewBox="0 0 240 40">
+        <g fill="none" stroke="url(#gOro)" stroke-width="1.6" stroke-linecap="round">
+          <path d="M120 20C100 4 80 4 70 14S74 32 84 26 82 12 72 16"/>
+          <path d="M120 20C140 4 160 4 170 14S166 32 156 26 158 12 168 16"/>
+          <path d="M70 20H8M170 20H232"/>
+          <path d="M40 20c-6-8-14-8-16 0M200 20c6-8 14-8 16 0"/>
+        </g>
+        <circle cx="120" cy="20" r="4" fill="url(#gGema)"/>
+        <circle cx="6" cy="20" r="2" fill="#e2b04f"/><circle cx="234" cy="20" r="2" fill="#e2b04f"/>
+      </symbol>
+
+      <!-- Rueca -->
+      <symbol id="rueca" viewBox="0 0 120 120">
+        <g fill="none" stroke="url(#gOro)" stroke-width="3" stroke-linecap="round">
+          <circle cx="62" cy="48" r="34"/>
+          <circle cx="62" cy="48" r="28" stroke-width="1.2"/>
+          <g stroke-width="2">
+            <path d="M62 14V82M28 48H96M38 24l48 48M86 24 38 72"/>
+          </g>
+          <path d="M30 104 50 70M94 104 76 70M20 108H104M62 82v22"/>
+          <path d="M14 108 30 60"/>
+        </g>
+        <circle cx="62" cy="48" r="6" fill="url(#gGema)"/>
+        <path d="M30 60q-6-20 4-34" fill="none" stroke="#e0218a" stroke-width="2" stroke-dasharray="2 3"/>
+      </symbol>
+
+      <!-- Castillo -->
+      <symbol id="castillo" viewBox="0 0 400 220">
+        <path d="M0 220V170h30v-30l-6-4 18-46 18 46-6 4v30h40v-60l-8-6 26-68 26 68-8 6v18h20V70l-10-8 40-62 40 62-10 8v58h20v-18l-8-6 26-68 26 68-8 6v60h40v-30l-6-4 18-46 18 46-6 4v30h30v50Z"/>
+        <path d="M188 220v-40a12 12 0 0 1 24 0v40Z" fill="#fff" opacity=".25"/>
+      </symbol>
+
+      <!-- Mariposa -->
+      <symbol id="mariposa" viewBox="0 0 40 30">
+        <path d="M20 15C14 2 2 0 3 8s10 8 17 7C12 18 4 26 10 28s9-6 10-13ZM20 15C26 2 38 0 37 8s-10 8-17 7c8 3 16 11 10 13s-9-6-10-13Z" fill="url(#gOro)"/>
+        <path d="M20 8v16" stroke="#8f611b" stroke-width="1.4" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Partículas: pétalos y destellos -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <!-- ===================== INTRO: EL LIBRO ===================== -->
+  <div id="intro">
+    <div class="intro-rays"></div>
+    <svg class="intro-castle" aria-hidden="true"><use href="#castillo"/></svg>
+
+    <div class="book-stage">
+      <div class="book" id="book" role="button" tabindex="0" aria-label="Abrir el libro de la invitación">
+        <div class="book-back"></div>
+
+        <!-- Página final (derecha, fija) -->
+        <div class="page-static page right">
+          <div class="page-in p3">
+            <img class="pg-crown" src="assets/img/corona.png" alt="">
+            <p class="ink" data-c="cuento.pagina3"></p>
+            <p class="ink script pg-name" data-c="nombre"></p>
+            <button class="ink btn-gold" id="enterBtn" type="button">Abrir mi invitación</button>
+          </div>
+        </div>
+
+        <!-- Hoja 1 -->
+        <div class="leaf leaf-1">
+          <div class="face front page right">
+            <div class="page-in p1">
+              <img class="pg-aurora" src="assets/img/aurora-rosa.png" alt="">
+              <p class="ink" data-c="cuento.pagina1"></p>
+              <svg class="pg-flori ink"><use href="#flori"/></svg>
+            </div>
+          </div>
+          <div class="face back page left">
+            <div class="page-in p2">
+              <div class="hadas ink"><span class="hada h1"></span><span class="hada h2"></span><span class="hada h3"></span></div>
+              <p class="ink" data-c="cuento.pagina2"></p>
+              <svg class="pg-flori ink"><use href="#flori"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portada -->
+        <div class="leaf cover">
+          <div class="face front cover-front">
+            <div class="cover-shine"></div>
+            <div class="cover-frame">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="cover-content">
+              <img class="cv-crown" src="assets/img/corona.png" alt="">
+              <p class="cv-pre" data-c="titulo"></p>
+              <p class="cv-name script" data-c="nombre"></p>
+              <svg class="cv-flori"><use href="#flori"/></svg>
+              <p class="cv-sub" data-c="cuento.portada"></p>
+              <svg class="cv-castle" viewBox="0 0 400 240" aria-hidden="true"><use href="#escena"/></svg>
+            </div>
+          </div>
+          <div class="face back page left">
+            <div class="page-in p0">
+              <p class="ink script pg-erase" data-c="cuento.portada"></p>
+              <img class="pg-rueca ink" src="assets/img/aurora-rueca.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tap-hint">✨ Toca el libro para abrir ✨</p>
+    <div class="flash"></div>
+  </div>
+
+  <!-- ===================== INVITACIÓN ===================== -->
+  <main id="invitacion">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <svg class="escena" aria-hidden="true"><use href="#escena"/></svg>
+      <div class="frame-wrap">
+        <img class="marco" src="assets/img/marco-aurora.png" alt="Princesa en espejo dorado">
+        <span class="fairy fairy-rosa"></span>
+        <span class="fairy fairy-azul"></span>
+        <span class="fairy fairy-verde"></span>
+      </div>
+
+      <div class="name-block">
+        <p class="pre-title" data-c="titulo"></p>
+        <div class="ribbon">
+          <h1 class="hero-name script oro-text" data-c="nombre"></h1>
+        </div>
+        <p class="hero-date" id="heroDate"></p>
+      </div>
+
+      <a href="#cuento" class="scroll-hint" aria-label="Bajar">
+        <span>Desliza</span>
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+    </section>
+
+    <!-- CUENTO / FRASE -->
+    <section class="sec cuento" id="cuento">
+      <img class="mariposas reveal" src="assets/img/mariposas.png" alt="" aria-hidden="true">
+      <img class="corona-sec reveal-zoom" src="assets/img/corona.png" alt="">
+      <h2 class="script-title oro-text reveal">Érase una vez...</h2>
+      <p class="frase reveal" data-c="frase"></p>
+      <img class="aurora-cuento reveal-zoom" src="assets/img/aurora-rueca.png" alt="">
+    </section>
+
+    <div class="divider"><svg><use href="#flori"/></svg></div>
+
+    <!-- PADRES -->
+    <section class="sec padres">
+      <h2 class="caps-title oro-text reveal" data-c="padres.texto"></h2>
+      <div class="nombres reveal">
+        <p class="nombre-caps" data-c="padres.papa"></p>
+        <span class="amp script">&amp;</span>
+        <p class="nombre-caps" data-c="padres.mama"></p>
+      </div>
+      <p class="dedicatoria reveal" data-c="padres.dedicatoria"></p>
+      <div id="padrinos"></div>
+    </section>
+
+    <!-- CUENTA REGRESIVA -->
+    <section class="sec countdown-sec">
+      <h2 class="script-title oro-text reveal">¡Falta muy poco!</h2>
+      <div class="countdown reveal" id="countdown">
+        <div class="cd"><span class="num" id="cdD">00</span><span class="lbl">Días</span></div>
+        <span class="sep">:</span>
+        <div class="cd"><span class="num" id="cdH">00</span><span class="lbl">Horas</span></div>
+        <span class="sep">:</span>
+        <div class="cd"><span class="num" id="cdM">00</span><span class="lbl">Min</span></div>
+        <span class="sep">:</span>
+        <div class="cd"><span class="num" id="cdS">00</span><span class="lbl">Seg</span></div>
+      </div>
+      <p class="cd-date reveal" id="cdDate"></p>
+      <a class="btn-outline reveal" id="calBtn" target="_blank" rel="noopener">Agregar a mi calendario</a>
+    </section>
+
+    <!-- ITINERARIO -->
+    <section class="sec itinerario">
+      <h2 class="caps-title oro-text reveal">Itinerario</h2>
+      <p class="sub reveal">Así se escribirá este capítulo</p>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <div class="divider"><svg><use href="#flori"/></svg></div>
+
+    <!-- VESTIMENTA -->
+    <section class="sec vestimenta">
+      <h2 class="caps-title oro-text reveal">Código de vestimenta</h2>
+      <img class="siluetas reveal-zoom" src="assets/img/siluetas.png" alt="Siluetas de princesa y príncipe">
+      <p class="dress-type reveal" data-c="vestimenta.tipo"></p>
+      <p class="dress-note reveal"><span class="swatch"></span><span data-c="vestimenta.nota"></span></p>
+    </section>
+
+    <!-- REGALOS -->
+    <section class="sec regalos">
+      <h2 class="caps-title oro-text reveal" data-c="regalos.titulo"></h2>
+      <p class="sub reveal" data-c="regalos.texto"></p>
+      <div class="gifts" id="gifts"></div>
+    </section>
+
+    <!-- CALENDARIO -->
+    <section class="sec calendario">
+      <h2 class="script-title oro-text reveal" id="calMonth"></h2>
+      <div class="cal reveal" id="cal"></div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="sec rsvp">
+      <img class="aurora-rsvp reveal-zoom" src="assets/img/aurora-rosa.png" alt="">
+      <h2 class="caps-title oro-text reveal">Confirma tu asistencia</h2>
+      <p class="sub reveal">Por favor confirma antes del <strong data-c="rsvp.fechaLimite"></strong></p>
+      <a class="btn-gold big reveal" id="rsvpBtn" target="_blank" rel="noopener">Confirmar aquí</a>
+    </section>
+
+    <!-- FINAL -->
+    <footer class="final">
+      <svg class="escena" aria-hidden="true"><use href="#escena"/></svg>
+      <p class="despedida reveal" data-c="despedida"></p>
+      <h2 class="script-title big oro-text reveal">¡Te espero!</h2>
+      <p class="firma script reveal" data-c="nombre"></p>
+    </footer>
+  </main>
+
+  <!-- Música -->
+  <audio id="bgMusic" loop preload="auto"></audio>
+  <button id="musicBtn" class="music-btn" type="button" aria-label="Pausar o reproducir música">
+    <span class="bars"><i></i><i></i><i></i><i></i></span>
+    <svg class="note" viewBox="0 0 24 24"><path d="M9 18a3 3 0 1 1-2-2.8V5l12-2v11a3 3 0 1 1-2-2.8V6.3l-8 1.4Z" fill="currentColor"/></svg>
+  </button>
+
+  <script src="js/config.js?v=9"></script>
+  <script src="js/main.js?v=9"></script>
+</body>
+</html>
